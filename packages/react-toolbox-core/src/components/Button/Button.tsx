@@ -40,7 +40,7 @@ export default function buttonFactory(
   { ButtonNode, LinkNode, passthrough }: ButtonFactoryArgs,
 ): ComponentClass<ButtonProps> {
   const passProps = getPassThrough(passthrough);
-  return class Button extends PureComponent<ButtonProps, void> {
+  return class Button extends PureComponent<ButtonProps> {
     public static defaultProps = {
       accent: false,
       flat: false,

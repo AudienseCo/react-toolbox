@@ -42,7 +42,7 @@ export type Day = ComponentClass<DayProps>;
 
 export default function dayFactory({ DayNode, passthrough }: DayFactoryArgs): Day {
   const passProps = getPassThrough(passthrough);
-  return class Day extends PureComponent<DayProps, void> {
+  return class Day extends PureComponent<DayProps> {
     public static defaultProps = {
       isDayBlocked: F,
       isDayDisabled: F,

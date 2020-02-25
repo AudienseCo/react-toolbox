@@ -89,7 +89,7 @@ export default function monthFactory({
   passthrough,
 }: MonthFactoryArgs): Month {
   const passProps = getPassThrough(passthrough);
-  return class Month extends Component<MonthProps, void> {
+  return class Month extends Component<MonthProps> {
     public shouldComponentUpdate(nextProps) {
       if (
         this.props.viewDate.getTime() !== nextProps.viewDate.getTime() ||
