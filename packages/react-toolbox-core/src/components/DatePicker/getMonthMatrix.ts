@@ -12,8 +12,8 @@ export default function getMonthMatrix(time: number, sundayFirstDayOfWeek: boole
   const viewDate = new Date(time);
 
   const firstDay = sundayFirstDayOfWeek
-    ? subDays(startOfWeek(viewDate), 1)
-    : startOfWeek(viewDate);
+    ? startOfWeek(viewDate)
+    : startOfWeek(viewDate, {weekStartsOn: 1});
 
   const lastDay = sundayFirstDayOfWeek
     ? subDays(lastDayOfWeek(lastDayOfMonth(viewDate)), 1)

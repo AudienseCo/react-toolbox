@@ -5,8 +5,8 @@ function getMonthMatrix(time, sundayFirstDayOfWeek) {
     var monthMatrix = [];
     var viewDate = new Date(time);
     var firstDay = sundayFirstDayOfWeek
-        ? date_fns_1.subDays(date_fns_1.startOfWeek(viewDate), 1)
-        : date_fns_1.startOfWeek(viewDate);
+        ? date_fns_1.startOfWeek(viewDate)
+        : date_fns_1.startOfWeek(viewDate, { weekStartsOn: 1 });
     var lastDay = sundayFirstDayOfWeek
         ? date_fns_1.subDays(date_fns_1.lastDayOfWeek(date_fns_1.lastDayOfMonth(viewDate)), 1)
         : date_fns_1.lastDayOfWeek(date_fns_1.lastDayOfMonth(viewDate));
